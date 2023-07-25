@@ -170,7 +170,7 @@ return (
 </div>
 
 <footer>
-  Share this quote <a href="twitter.com/intent/tweet"><i class="fab fa-twitter" style={{
+  Share this quote <a href="twitter.com/intent/tweet" id="tweet-quote"><i class="fab fa-twitter" style={{
     color: quotesArray[count].color2}}></i></a>
 </footer>
 </body>
