@@ -1,4 +1,3 @@
-import placeholder from "../img/200.jpeg"
 import buzz from "../img/buzz.png"
 import bowling from "../img/bowling.png"
 import joker from "../img/joker.png"
@@ -20,8 +19,8 @@ const quotesArray = [
       character: "Luke Skywalker",
       film: "Star Wars: Episode IV - A New Hope",
       release_date: "1977",
-      color1: "blue",
-      color2: "yellow",
+      color1: "black",
+      color2: "goldenrod",
       image: luke
     },
     // Add more objects here...
@@ -31,7 +30,7 @@ const quotesArray = [
       film: "The Terminator",
       release_date: "1984",
       color1: "black",
-      color2: "red",
+      color2: "darkred",
       image: terminator
     },
     {
@@ -39,8 +38,8 @@ const quotesArray = [
         character: "Chief Brody",
         film: "Jaws",
         release_date: "1975",
-        color1: "blue",
-        color2: "yellow",
+        color1: "darkcyan",
+        color2: "white",
         image: shark
       },
     {
@@ -49,15 +48,15 @@ const quotesArray = [
       film: "The Dark Knight",
       release_date: "2008",
       color1: "purple",
-      color2: "green",
+      color2: "chartreuse",
       image: joker
     },{
         quote: "To infinity and beyond!",
         character: "Buzz Lightyear",
         film: "Toy Story",
         release_date: "1995",
-        color1: "green",
-        color2: "white",
+        color1: "springgreen",
+        color2: "purple",
         image: buzz
       },
       {
@@ -66,7 +65,7 @@ const quotesArray = [
         film: "Terminator 2: Judgment Day",
         release_date: "1991",
         color1: "black",
-        color2: "red",
+        color2: "darkred",
         image: terminator
       },
       {
@@ -74,8 +73,8 @@ const quotesArray = [
         character: "Gollum",
         film: "The Lord of the Rings: The Two Towers",
         release_date: "2002",
-        color1: "black",
-        color2: "gold",
+        color1: "darkred",
+        color2: "goldenrod",
         image: gollum
       },
       {
@@ -101,7 +100,7 @@ const quotesArray = [
         character: "Dory",
         film: "Finding Nemo",
         release_date: "2003",
-        color1: "blue",
+        color1: "darkblue",
         color2: "yellow",
         image: dory
       },
@@ -110,8 +109,8 @@ const quotesArray = [
         character: "The dude",
         film: "The Big Lebowski",
         release_date: "1998",
-        color1: "navy",
-        color2: "gold",
+        color1: "saddlebrown",
+        color2: "burlywood",
         image: bowling
       },
       {
@@ -142,27 +141,38 @@ return (
     borderStyle: 'solid'
 
 }}>
-<div className="welcome-div">
-<h1>Film Quote Generator</h1>
-<img src={filmstrip} alt="FilmStrip" height={150} id="filmstrip"/>
-</div>
-<div className="button-div">
-<button onClick={handleClick} style={{
-    color: quotesArray[count].color2
-}}>New Quote</button>
-</div>
+
+
 <div className="quote-div" >
 
 <img src={quotesArray[count].image} height={100} />
 {/* remove the first h2 later */}
+<div className="quote-text" style={{
+    backgroundColor: quotesArray[count].color2,
+    color: quotesArray[count].color1,
+    borderColor: quotesArray[count].color1,
+    borderStyle: 'solid',
+    borderRadius: '8px'
 
-<h2>"{quotesArray[count].quote}" - {quotesArray[count].character}</h2>
-<h3>Film: {quotesArray[count].film}</h3>
-<h4>Release Year: {quotesArray[count].release_date}</h4>
-
-
-
+}}>
+<h1>"{quotesArray[count].quote}"</h1>
+<h2>{quotesArray[count].character}</h2>
+<h3>{quotesArray[count].film} - {quotesArray[count].release_date}</h3>
 </div>
+<div className="button-div">
+
+
+<button onClick={handleClick} style={{
+    backgroundColor: quotesArray[count].color2,
+    color: quotesArray[count].color1
+}}>New Quote</button>
+</div>
+</div>
+
+<footer>
+  Share this quote <a href="https://twitter.com/freecodecamp/"><i class="fab fa-twitter" style={{
+    color: quotesArray[count].color2}}></i></a>
+</footer>
 </body>
 </>
 );
