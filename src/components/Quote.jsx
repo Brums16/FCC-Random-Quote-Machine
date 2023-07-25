@@ -145,7 +145,7 @@ return (
 
 <div className="quote-div" id="quote-box">
 
-<img src={quotesArray[count].image} height={100} />
+<img src={quotesArray[count].image} height={200} />
 {/* remove the first h2 later */}
 <div className="quote-text" style={{
     backgroundColor: quotesArray[count].color2,
