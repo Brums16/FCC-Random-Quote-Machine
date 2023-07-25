@@ -95,4 +95,27 @@ footer {
 h1 {
     font-weight: normal
 }
-    
+
+@media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 1rem;
+    }
+    h3 {
+      font-size: 0.8rem;
+    }
+    h4 {
+      font-size: 0.6rem;
+    }
+    .button-div {
+      margin-top: 2rem;
+    }
+    img {
+      max-height: 200px;
+    }
+    button {
+      font-size: 1.5rem;
+    }
+  }
