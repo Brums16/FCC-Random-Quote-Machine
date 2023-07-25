@@ -143,7 +143,7 @@ return (
 }}>
 
 
-<div className="quote-div" >
+<div className="quote-div" id="quote-box">
 
 <img src={quotesArray[count].image} height={100} />
 {/* remove the first h2 later */}
@@ -155,14 +155,14 @@ return (
     borderRadius: '8px'
 
 }}>
-<h1>"{quotesArray[count].quote}"</h1>
-<h2>{quotesArray[count].character}</h2>
+<h1 id="text">"{quotesArray[count].quote}"</h1>
+<h2 id="author">{quotesArray[count].character}</h2>
 <h3>{quotesArray[count].film} - {quotesArray[count].release_date}</h3>
 </div>
 <div className="button-div">
 
 
-<button onClick={handleClick} style={{
+<button id="new-quote" onClick={handleClick} style={{
     backgroundColor: quotesArray[count].color2,
     color: quotesArray[count].color1
 }}>New Quote</button>
@@ -170,7 +170,7 @@ return (
 </div>
 
 <footer>
-  Share this quote <a href="https://twitter.com/freecodecamp/"><i class="fab fa-twitter" style={{
+  Share this quote <a href="twitter.com/intent/tweet"><i class="fab fa-twitter" style={{
     color: quotesArray[count].color2}}></i></a>
 </footer>
 </body>
