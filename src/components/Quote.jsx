@@ -156,8 +156,8 @@ return (
 
 }}>
 <h1 id="text">"{quotesArray[count].quote}"</h1>
-<h2 id="author">{quotesArray[count].character}</h2>
-<h3>{quotesArray[count].film} - {quotesArray[count].release_date}</h3>
+<h3 id="author"> - {quotesArray[count].character}</h3>
+<h4>{quotesArray[count].film}, {quotesArray[count].release_date}</h4>
 </div>
 <div className="button-div">
 
